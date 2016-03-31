@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import App from './containers/App'
-import Home from './containers/Home'
-import Post from './containers/Post'
+import App from './components/app'
+import Home from './components/home'
+import Post from './components/post'
 
 import { fetchJokes } from './actions/jokes-actions'
 
