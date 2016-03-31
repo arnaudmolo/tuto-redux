@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from './../containers/login-container'
+import Login from './../components/login'
 import Register from './register'
 
 const Sidebar = () =>

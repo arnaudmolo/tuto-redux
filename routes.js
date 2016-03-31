@@ -9,12 +9,8 @@ import { fetchJokes } from './actions/jokes-actions'
 export default (dispatch) => (
   <Route path="/" component={App}>
     <IndexRoute
-      component={Home} onEnter={onEnterIndex(dispatch)} />
+      component={Home} />
     <Route path="/post"
        component={Post} />
   </Route>
 )
-
-const onEnterIndex = dispatch => (nextState, replaceState) => {
-  return dispatch(fetchJokes())
-}

@@ -6,7 +6,7 @@ const Joke = ({content}) =>
     <span>{content}</span>
   </li>
 
-const JokeList = ({jokes}) =>
+const JokeList = ({jokes = [{content: 'Hey, mais ca serais pas la blague par defaut du composant ?'}]}) =>
   <ul>
     {jokes.map((joke, key) => <Joke key={key} {...joke} />)}
   </ul>

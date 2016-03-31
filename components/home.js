@@ -1,8 +1,8 @@
 import React from 'react'
-import MainJoke from './../containers/main-joke-container'
-import JokeList from './../containers/joke-list-container'
+import MainJoke from './../components/main-joke'
+import JokeList from './../components/joke-list'
 import Button from './../components/button'
-import Sidebar from './../containers/sidebar-container'
+import Sidebar from './../components/sidebar'
 
 const Home = () =>
   <div>
