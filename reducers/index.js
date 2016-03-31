@@ -18,6 +18,7 @@ function jokes (state = {jokes: [], error: false}, action) {
 }
 
 function user (state = {
+  connected: false,
   jokes: []
 }, action) {
   if (action.type === 'LOGIN') {

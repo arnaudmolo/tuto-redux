@@ -2,7 +2,7 @@ import React from 'react'
 import MainJoke from './../components/main-joke'
 import JokeList from './../components/joke-list'
 import Button from './../components/button'
-import Sidebar from './../components/sidebar'
+import Sidebar from './../containers/sidebar-container'
 
 const Home = () =>
   <div>

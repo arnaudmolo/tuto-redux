@@ -1,11 +1,11 @@
 import React from 'react'
-import Login from './../components/login'
+import Login from './../containers/login-container'
 import Register from './register'
 
-const Sidebar = () =>
+const UserRegistration = () =>
   <div>
     <Login />
     <Register />
   </div>
 
-export default Sidebar
+export default UserRegistration

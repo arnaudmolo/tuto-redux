@@ -54,13 +54,12 @@ export default {
    */
 
   saveJoke(joke, user) {
-
     joke = JSON.stringify(
       {
         content: joke,
         date: new Date(),
         language: navigator.language || 'unknown',
-        subscriberId: user.userId
+        userId: user.userId
       }
     );
 

@@ -1,15 +1,12 @@
 import React from 'react'
 import Button from './../components/button'
 import Close from './../components/close'
-import Form from './../components/Form'
+import Form from './../components/form'
 
-const Post = ({onSubmit}, value, target) =>
+const Post = ({onSubmit}, value) =>
   <div className="writing">
     <Close />
-    <Form onSubmit={e => {
-        e.preventDefault()
-        return onSubmit(value)
-      }}>
+    <Form onSubmit={e => onSubmit(value)}>
       <textarea
         onChange={e => value = e.nativeEvent.target.value}
         rows="5"

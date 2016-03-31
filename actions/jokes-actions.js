@@ -32,7 +32,7 @@ export function postJoke (joke, user) {
         payload: await API.saveJoke(joke, user)
       })
     } catch (e) {
-      console.log('error ?', e);
+      console.log('error ?', e)
     } finally {
       console.log('bon c bon ?')
     }

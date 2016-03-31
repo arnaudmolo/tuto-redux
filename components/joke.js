@@ -35,9 +35,7 @@ function jokeColor (joke) {
   }
 }
 
-const Joke = ({joke, onVoteDown, onVoteUp}) => {
-  const colors = jokeColor(joke)
-  const divider = joke.positiv + joke.negativ || 1
+const Joke = ({joke, onVoteDown, onVoteUp, colors, divider}) => {
   return (
     <div className={cx(
         'card--joke',
@@ -60,5 +58,12 @@ const Joke = ({joke, onVoteDown, onVoteUp}) => {
   )
 }
 
+const mergeProps = (stateProps, dispatchedProps, {joke}) => {
+  return {
+    joke: joke,
+    colors: jokeColor(joke),
+    divider: joke.positiv + joke.negativ || 1
+  }
+}
 
-export default Joke
+export default connect(null, null, mergeProps)(Joke)

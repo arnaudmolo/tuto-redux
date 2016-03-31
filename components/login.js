@@ -1,14 +1,12 @@
 import React from 'react'
+import From from './form'
 
 const Login = ({onSubmit, email, password}) =>
   <div>
     <h2>You have to be logged to post a joke !</h2>
-    <form
+    <From
       method="post"
-      onSubmit={e => {
-        e.preventDefault()
-        return onSubmit({email, password})
-      }}
+      onSubmit={e => onSubmit({email, password})}
       className="form isVertical">
       <div className="form__block">
         <input
@@ -27,7 +25,7 @@ const Login = ({onSubmit, email, password}) =>
       <div className="form__block">
         <input type="submit" className="button--white button--full-w" />
       </div>
-    </form>
+    </From>
   </div>
 
 export default Login

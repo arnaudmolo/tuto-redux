@@ -7,7 +7,7 @@ export function login (user) {
         type: 'LOGIN',
         payload: await API.loginUser(user)
       })
-      return await dispatch(getUserJokes())
+      return await dispatch(getUserJokes(user.userId, user.id))
     } catch (e) {
       console.warn('erreur de login =(', e)
     }
@@ -27,9 +27,7 @@ export function getUserJokes () {
         payload: await API.getUserJokes(user.userId, user.id)
       })
     } catch (e) {
-
-    } finally {
-
+      console.error(e)
     }
   }
 }

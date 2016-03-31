@@ -13,8 +13,7 @@ const JokeList = ({jokes = [{content: 'Hey, mais ca serais pas la blague par def
 
 const Sidebar = ({jokes, connected}) =>
   <div className='sidebar'>
-    <JokeList jokes={jokes} />
-    {connected ? [] : <UserRegistration />}
+    {connected ? <JokeList jokes={jokes} /> : <UserRegistration />}
   </div>
 
 export default Sidebar
