@@ -35,13 +35,9 @@ function jokeColor (joke) {
   }
 }
 
-export default connect(null, null, (_, $, {joke}) => {
-  return {
-    joke,
-    colors: jokeColor(joke),
-    divider: joke.positiv + joke.negativ || 1
-  }
-})(({joke, onVoteDown, onVoteUp, colors, divider}) => {
+const Joke = ({joke, onVoteDown, onVoteUp}) => {
+  const colors = jokeColor(joke)
+  const divider = joke.positiv + joke.negativ || 1
   return (
     <div className={cx(
         'card--joke',
@@ -62,4 +58,7 @@ export default connect(null, null, (_, $, {joke}) => {
       </div>
     </div>
   )
-})
+}
+
+
+export default Joke

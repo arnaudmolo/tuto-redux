@@ -6,7 +6,10 @@ import Form from './../components/Form'
 const Post = ({onSubmit}, value, target) =>
   <div className="writing">
     <Close />
-    <Form onSubmit={_ => onSubmit(value)}>
+    <Form onSubmit={e => {
+        e.preventDefault()
+        return onSubmit(value)
+      }}>
       <textarea
         onChange={e => value = e.nativeEvent.target.value}
         rows="5"

@@ -7,13 +7,13 @@ import React from 'react';
 
 let animationDuration = 2000;
 
-const toAnimation = (children) => {
+const toAnimation = string => {
     const lettering = []
-    for (let i = 0; i <= children.length - 1; i++) {
+    for (let i = 0; i <= string.length - 1; i++) {
       lettering.push(<span key={Math.random()} style={{
-          animationDelay: animationDuration / children.length * i + "ms"
+          animationDelay: animationDuration / string.length * i + "ms"
         }
-      }>{children[i]}</span>);
+      }>{string[i]}</span>);
     }
     return lettering
 }
