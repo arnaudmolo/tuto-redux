@@ -11,12 +11,12 @@ export default class Root extends Component {
     history: PropTypes.object.isRequired
   }
 
-  render() {
-    const { store, history } = this.props
+  render(props = this.props) {
+    const { store, history } = props
     return (
       <Provider store={store}>
         <div>
-          <Router history={history} routes={routes()} />
+          <Router history={history} routes={routes(store.dispatch)} />
           <DevTools />
         </div>
       </Provider>

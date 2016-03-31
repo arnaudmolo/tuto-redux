@@ -6,11 +6,10 @@ import Post from './containers/post-container'
 
 import { fetchJokes } from './actions/jokes-actions'
 
-export default () => (
+export default (dispatch) =>
   <Route path="/" component={App}>
     <IndexRoute
-      component={Home} />
+      component={Home} onEnter={() => dispatch(fetchJokes())} />
     <Route path="/post"
        component={Post} />
   </Route>
-)

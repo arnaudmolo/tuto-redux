@@ -11,7 +11,7 @@ function jokes (state = {jokes: [], error: false}, action) {
     case 'JOKE-FETCH':
       return {
         ...state,
-        jokes: [action.payload, ...state.jokes]
+        jokes: [action.payload, ...state.jokes.slice(0, 9)]
       }
   }
   return state

@@ -16,6 +16,7 @@ function getJokes (joke) {
 export function fetchJokes () {
   return async function (dispatch, getState) {
     try {
+      setTimeout(() => dispatch(fetchJokes()), 1000)
       return dispatch(getJokes(await API.getRandomJoke()))
     } catch (e) {
       return dispatch(fetchJokesError())
